@@ -1,18 +1,22 @@
 // alert("Tardis Landing")
+function fetch()
 
 $.ajax({
     URL: "https://phoenixjaymes.com/lab/r-doctorwho-api/doctors",
-    jsonp: "callback",
-    datatype:'jsonp',
-    data: {
-
+    dataType:'jsonp',
+    crossDomain:true,
+    success: function(data){
+        $('#name').html($(data).html)
+        var src = $(data).html();
+        alert(src);
+        return false;
     }
-})
+    });
 
 const URL = "https://phoenixjaymes.com/lab/r-doctorwho-api/doctors"
 
-const $Doctor = $('#name')
-const $form = $('form')
+const $Doctor = $('#name');
+const $form = $('form');
 const $input = $('input[type="text"]');
 
 $form.on('submit',handleGetData)
@@ -28,6 +32,5 @@ function handleGetData(event){
     },  function(console) {
         console.log('The Daleks are Here!')
         console.log(error)
-    
-    })
+    });
     }

@@ -1,8 +1,61 @@
 body {
-    background-color: rgb(84, 118, 239);
+    background-color: silver;
 }
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: .5fr 1fr 1fr 1fr;
+    grid-template-rows: .3fr .2fr .08fr .08fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "main main main form"
+        "leftdoor tardis tardis rightdoor"
+        "leftdoor tardis tardis rightdoor";
+        
+}
+form {
+    height: 79.28px;
+    text-align: center;
+}
+nav{
+    background-color: darkblue;
+    grid-area: nav;
+}
+main {
+    background-color: blue;
+    grid-area: main;
+    height: 79.28px;
+}
+
+ h1 {
+    background-color: darkblue;
+    color: whitesmoke;
+    text-align: center; 
+}
+h2{
+    text-align: center;
+    color: whitesmoke;
+}
+.tardis {
+    background-color: blueviolet;
+    grid-area: tardis;
+    height: 400px;
+}
+
 .leftdoor {
     height: 400px;
     width: 150px;
     background-color: blue;
+    grid-area: leftdoor;
+    border-color: darkblue;
+    border-style: outset;
+}
+.rightdoor {
+background-color: blue;
+height: 400px;
+width: 150px;
+grid-area: rightdoor;
+border-color: darkblue;
+border-style: outset;
+grid-row-end: auto;
 }
