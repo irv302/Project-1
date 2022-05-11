@@ -1,33 +1,55 @@
 body {
-    background-color: silver;
-    background: url()
+    background-color: rgb(50, 19, 19);
+
+    max-height: fit-content;
+    
 }
 .container{
     display: grid;
-    height: 800px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .1fr .1fr 1fr 1fr;
+    height: 630px;
+    width: 800px;
+    grid-template-columns: .5fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .1fr .1fr .8fr;
     grid-template-areas:
         "nav nav nav nav"
         "main main main main"
-        "category tardis tardis rightdoor"
-        "category tardis tardis rightdoor";
+        "category tardis tardis tardis"
+        "rightdoor tardis tardis tardis";
         
 }
-form {
-    height: 79.28px;
-    text-align: center;
+.container2 {
+    display:grid;
+    grid-column: 1fr;
+    grid-row: 1fr 1fr 1fr 1fr;
+    height: 40px;
+    grid-template-areas: non
+    "answer1"
+    "answer2"
+    "answer3"
+    "answer4";
 }
+.answer1{
+    grid-area: answer1;
+
+}
+.answer2{
+    grid-area: answer2;
+
+}
+
 nav{
-    background-color: darkblue;
+    background-color: rgb(203, 94, 94);
     grid-area: nav;
     height: 150px;
+    border-style: inset;
+    border-width: 10px;
 }
 main {
-    background-color: blue;
+    background-color: rgb(255, 128, 0);
     grid-area: main;
-    height: 79.28px;
+    height: 80px;
     text-align:center;
+    border-style: groove outset;
 }
 
  h1 {
@@ -40,28 +62,32 @@ h2{
     color: whitesmoke;
 }
 #tardis {
-    background-color: blueviolet;
+    background-color: rgba(189, 151, 224, 0.657);
     grid-area: tardis;
     height: 400px;
-    width: 500px;
+    width: 600px;
+    border-width: 10px;
+    border-style: groove;
+    border-color: lightcoral;
 
 }
 
 #category {
-    height: 478px;
+    height: 47px;
     width: 335px;
-    background-color: blue;
+    background-color: rgb(170, 170, 224);
     grid-area: category;
-    border-color: darkblue;
+    border-color: rgb(203, 223, 225);
     border-style: outset;
     grid-row-start: auto;
+    position: center;
 }
 #rightdoor {
-    background-color: blue;
-    height: 478px;
+    background-color: rgb(136, 136, 222);
+    height: 47px;
     width: 335px;
     grid-area: rightdoor;
-    border-color: darkblue;
+    border-color: rgb(173, 173, 191);
     border-style: outset;
     grid-row-end: auto;
 }
