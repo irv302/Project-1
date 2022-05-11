@@ -1,16 +1,17 @@
 body {
     background-color: silver;
+    background: url()
 }
 .container{
     display: grid;
-    height: 100vh;
-    grid-template-columns: .5fr 1fr 1fr 1fr;
-    grid-template-rows: .3fr .2fr .08fr .08fr;
+    height: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .1fr 1fr 1fr;
     grid-template-areas:
         "nav nav nav nav"
-        "main main main form"
-        "leftdoor tardis tardis rightdoor"
-        "leftdoor tardis tardis rightdoor";
+        "main main main main"
+        "category tardis tardis rightdoor"
+        "category tardis tardis rightdoor";
         
 }
 form {
@@ -20,15 +21,17 @@ form {
 nav{
     background-color: darkblue;
     grid-area: nav;
+    height: 150px;
 }
 main {
     background-color: blue;
     grid-area: main;
     height: 79.28px;
+    text-align:center;
 }
 
  h1 {
-    background-color: darkblue;
+    background-color: rgb(2, 2, 148);
     color: whitesmoke;
     text-align: center; 
 }
@@ -36,26 +39,29 @@ h2{
     text-align: center;
     color: whitesmoke;
 }
-.tardis {
+#tardis {
     background-color: blueviolet;
     grid-area: tardis;
     height: 400px;
+    width: 500px;
+
 }
 
-.leftdoor {
-    height: 400px;
-    width: 150px;
+#category {
+    height: 478px;
+    width: 335px;
     background-color: blue;
-    grid-area: leftdoor;
+    grid-area: category;
     border-color: darkblue;
     border-style: outset;
+    grid-row-start: auto;
 }
-.rightdoor {
-background-color: blue;
-height: 400px;
-width: 150px;
-grid-area: rightdoor;
-border-color: darkblue;
-border-style: outset;
-grid-row-end: auto;
+#rightdoor {
+    background-color: blue;
+    height: 478px;
+    width: 335px;
+    grid-area: rightdoor;
+    border-color: darkblue;
+    border-style: outset;
+    grid-row-end: auto;
 }

@@ -1,36 +1,64 @@
 // alert("Tardis Landing")
-function fetch()
+// function fetch()
 
-$.ajax({
-    URL: "https://phoenixjaymes.com/lab/r-doctorwho-api/doctors",
-    dataType:'jsonp',
-    crossDomain:true,
-    success: function(data){
-        $('#name').html($(data).html)
-        var src = $(data).html();
-        alert(src);
-        return false;
-    }
+// $.ajax({
+//     URL: "https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple",
+//     type:'GET',
+//     dataType:'jsonp',
+//     crossDomain:true,
+//     success: function(data){
+//         $('#name').html($(data).html)
+//         var src = $(data).html();
+//         alert(src);
+//         return false;
+//     }
+//     });
+// DUE TO MY PLAN A AND PLAN B NOT WORKING I WENT WITH C  SIMPLE TRIVIA GAME..
+
+//will call API on a double click of the
+// window.ondblclick = sendApiRequest
+
+// console.log($.ajax('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple'));
+
+// 
+function handleSubmit(){
+
+    const promise = $.ajax({
+        url:`https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple`
     });
 
-const URL = "https://phoenixjaymes.com/lab/r-doctorwho-api/doctors"
+    promise.then(
+        (data) => {
+console.log(data);
 
-const $Doctor = $('#name');
-const $form = $('form');
-const $input = $('input[type="text"]');
+render(data)
+        },
+        (error) => {
+            console.log(error)
 
-$form.on('submit',handleGetData)
+        }
+    
+    )
+}
+handleSubmit()
 
-function handleGetData(event){
+//lets render our data//
+function render(data){
+//will display the topic / category for the quiz
+    document.querySelector("#category").innerHTML = `Category: ${data.results[0].category}`
 
-    event.preventDefault();
-    const userInput = $input.val();
+//will display the dificulty leve of the question
+    document.querySelector("#difficulty").innerHTML = `Difficulty: ${data.results[0].difficulty}`
+}
 
-    $.ajax(URL + userInput).then(function(data){
-        console.log(data)
-        $Doctor.name(data.name)
-    },  function(console) {
-        console.log('The Daleks are Here!')
-        console.log(error)
-    });
-    }
+
+    // $.ajax(URL).then(function(data)
+
+
+
+    
+   
+    // },  function(console) {
+    //     console.log('The Daleks are Here!')
+    //     console.log(error)
+
