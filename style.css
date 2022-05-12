@@ -107,13 +107,11 @@ h2{
 .tg-modal {
     width: 100%;
     height: 100%;
-    background-color: rgba(66, 0, 0, 0.7);
     position: absolute;
     top: 0; 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    align-items: end;
+     
 }
 .modal-content{
     width: 400px;
@@ -121,8 +119,8 @@ h2{
     background-color: white;
     border-radius: 40%;
     text-align: center;
-    
     padding: 15px;
+    
 
 }
 .close{

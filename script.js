@@ -18,13 +18,6 @@
 //will call API on a double click of the
 window.ondblclick = handleSubmit;
 
-document.querySelector('.tg-modal')addEventListener(onload)
-
-document.querySelector('.close').addEventListener('click', function(){
-    document.querySelector('.tg-modal').getElementsByClassName.display = 'none';
-
-});
-
 // console.log($.ajax('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple'));
 
 //
@@ -62,9 +55,4 @@ function render(data) {
   document.querySelector(
     "#question"
   ).innerHTML = `Question: ${data.results[0].question}`;
-}
-// $.ajax(URL).then(function(data)
-
-// },  function(console) {
-//     console.log('The Daleks are Here!')
-//     console.log(error)
+  }
