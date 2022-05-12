@@ -16,49 +16,48 @@
 // DUE TO MY PLAN A AND PLAN B NOT WORKING I WENT WITH C  SIMPLE TRIVIA GAME..
 
 //will call API on a double click of the
-// window.ondblclick = sendApiRequest
+window.ondblclick = handleSubmit
 
 // console.log($.ajax('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple'));
 
-// 
-function handleSubmit(){
+//
+function handleSubmit() {
+  const promise = $.ajax({
+    url: `https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple`,
+  });
 
-    const promise = $.ajax({
-        url:`https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple`
-    });
+  promise.then(
+    (data) => {
+      console.log(data);
 
-    promise.then(
-        (data) => {
-console.log(data);
-
-render(data)
-        },
-        (error) => {
-            console.log(error)
-
-        }
-    
-    )
+      render(data);
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 }
-handleSubmit()
+handleSubmit();
 
 //lets render our data//
-function render(data){
-//will display the topic / category for the quiz
-    document.querySelector("#category").innerHTML = `Category: ${data.results[0].category}`
+function render(data) {
+  //will display the topic / category for the quiz
+  document.querySelector(
+    "#category"
+  ).innerHTML = `Category: ${data.results[0].category}`;
 
-//will display the dificulty leve of the question
-    document.querySelector("#difficulty").innerHTML = `Difficulty: ${data.results[0].difficulty}`
+  //will display the dificulty leve of the question
+  document.querySelector(
+    "#difficulty"
+  ).innerHTML = `Difficulty: ${data.results[0].difficulty}`;
+
+  //will provide the question
+  document.querySelector(
+    "#question"
+  ).innerHTML = `Question: ${data.results[0].question}`;
 }
+// $.ajax(URL).then(function(data)
 
-
-    // $.ajax(URL).then(function(data)
-
-
-
-    
-   
-    // },  function(console) {
-    //     console.log('The Daleks are Here!')
-    //     console.log(error)
-
+// },  function(console) {
+//     console.log('The Daleks are Here!')
+//     console.log(error)

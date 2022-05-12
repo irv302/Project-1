@@ -43,6 +43,7 @@ nav{
     height: 150px;
     border-style: inset;
     border-width: 10px;
+   
 }
 main {
     background-color: rgb(255, 128, 0);
@@ -50,12 +51,15 @@ main {
     height: 80px;
     text-align:center;
     border-style: groove outset;
+    font-family: 'Indie Flower', cursive;
 }
 
  h1 {
     background-color: rgb(2, 2, 148);
     color: whitesmoke;
     text-align: center; 
+    font-family: 'Indie Flower', cursive;
+
 }
 h2{
     text-align: center;
@@ -69,6 +73,7 @@ h2{
     border-width: 10px;
     border-style: groove;
     border-color: lightcoral;
+    
 
 }
 
@@ -81,6 +86,8 @@ h2{
     border-style: outset;
     grid-row-start: auto;
     position: center;
+    font-size: larger;
+    font-family: 'Indie Flower', cursive;
 }
 #rightdoor {
     background-color: rgb(136, 136, 222);
@@ -90,4 +97,5 @@ h2{
     border-color: rgb(173, 173, 191);
     border-style: outset;
     grid-row-end: auto;
+    font-family: 'Indie Flower', cursive;
 }
