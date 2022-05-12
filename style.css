@@ -113,16 +113,15 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 .modal-content{
     width: 400px;
-    height: 500px;
+    height: 250px;
     background-color: white;
     border-radius: 40%;
     text-align: center;
+    
     padding: 15px;
-    
-    
 
-    
 }

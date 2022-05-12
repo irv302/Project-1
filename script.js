@@ -16,7 +16,9 @@
 // DUE TO MY PLAN A AND PLAN B NOT WORKING I WENT WITH C  SIMPLE TRIVIA GAME..
 
 //will call API on a double click of the
-window.ondblclick = handleSubmit
+window.ondblclick = handleSubmit;
+window.onload = getElmentById('#bg-modal');
+
 
 // console.log($.ajax('https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple'));
 
