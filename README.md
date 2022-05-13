@@ -25,3 +25,5 @@ https://trello.com/b/SRQGbedk/project
 ## Work cited 
 GA Lessons week 2 days 3-5 lots of review
 
+## The page
+https://glistening-torrone-fb9323.netlify.app/
