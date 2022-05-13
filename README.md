@@ -17,4 +17,11 @@ User can also skip any question by a simple double click of the mouse.
 
 ## Images
 <img src="./a/vafyKOg">
-if image not working see screen shot above marked game,
+if image not working see screen shot above marked game, same for wireframe.
+
+## This is a link for my trello 
+https://trello.com/b/SRQGbedk/project
+
+## Work cited 
+GA Lessons week 2 days 3-5 lots of review
+
