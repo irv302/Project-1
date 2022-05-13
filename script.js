@@ -55,4 +55,4 @@ function render(data) {
   document.querySelector(
     "#question"
   ).innerHTML = `Question: ${data.results[0].question}`;
-  }
+}

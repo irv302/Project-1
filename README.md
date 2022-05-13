@@ -9,6 +9,8 @@ Doctor Trivia is my first project wher i begin to learn how to intigade an api. 
 * CSS,
 * jQuery,
 * Ajax,
+* Gooogle fonts
+* Open Trivia DB API
 
 
 ## Features 
