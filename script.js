@@ -43,7 +43,7 @@ handleSubmit();
 function render(data) {
   //will display the topic / category for the quiz
   document.querySelector(
-    "#category"
+    "#Topic"
   ).innerHTML = `Category: ${data.results[0].category}`;
 
   //will display the dificulty leve of the question
@@ -56,4 +56,3 @@ function render(data) {
     "#question"
   ).innerHTML = `Question: ${data.results[0].question}`;
   }
-  
