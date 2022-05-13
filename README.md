@@ -15,5 +15,6 @@ Doctor Trivia is my first project wher i begin to learn how to intigade an api. 
 Users can play a simple trivia with a one action click
 User can also skip any question by a simple double click of the mouse.
 
-
-<img src="https://imgur.com/a/vafyKOg">
+## Images
+<img src="./a/vafyKOg">
+if image not working see screen shot above marked game,
